@@ -7,13 +7,97 @@ body{
 }
 
 .container {
-    width: 400px;
-    height: 400px;
-    background-color: rgba(128, 85, 69, 0.65);
+    width: 800px;
+    max-width: 100%; /* Ensures responsiveness */
+    background-color: rgba(24, 50, 93, 0.65);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem; /* Spacing between items inside the container */
+    gap: 1rem;
+    box-sizing: border-box; /* Includes padding and border in the width */
+    padding: 1rem; /* Padding will not extend the width beyond 800px */
 }
+
+.container .item {
+    flex: 1; /* Equal width for both items */
+    background-color: rgba(41, 102, 196, 0.65);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+hr {
+    border: none; /* Remove default border */
+    height: 2px; /* Set the thickness of the line */
+    background-color: #000000; /* Set the color of the line */
+    width: 100%; /* Ensure it spans the container */
+    margin: 1rem 0; /* Add spacing above and below */
+}
+
+.container .About{
+    display: flex;
+    /*background-color: rgba(24, 50, 93, 0.65);*/
+    flex-direction: column; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Optional: Add spacing between the items */
+}
+
+.About > .item2{
+    flex: 1; /* Equal width for both items */
+    background-color: rgba(50, 67, 96, 0.65);
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+}
+.container.introduction {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    width: 800px;
+    /*max-width: 100%; !* Ensure responsiveness *!*/
+    /*gap: 1rem; !* Add spacing between the boxes *!*/
+    padding: 1rem; /* Add padding inside the container */
+}
+
+.container.introduction .profile-picture img {
+    max-width: 100%; /* Ensures the image scales down to fit the container */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 20px; /* Optional: Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.skills {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Add spacing between items */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Optional: Add spacing between the items */
+}
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 1rem; /* Add spacing between items */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+ul li {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center align the content horizontally */
+    text-align: center; /* Center align the text */
+}
+
+ul li svg {
+    width: 32px;
+    height: 32px; /* Set the size of the icon */
+    display: block; /* Ensure the SVG is treated as a block element */
+    margin-bottom: 0.5rem; /* Add spacing between the icon and text */
+}
+
