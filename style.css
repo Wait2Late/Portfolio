@@ -69,11 +69,11 @@ hr {
 }
 
 .skills {
-    display: flex;
-    flex-direction: row; /* Align items horizontally */
-    justify-content: space-between; /* Add spacing between items */
-    align-items: flex-start; /* Align items at the top */
-    gap: 2rem; /* Optional: Add spacing between the items */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 2rem; /* Add spacing between items */
+    justify-items: center; /* Center items horizontally */
+    align-items: start; /* Align items at the top */
 }
 
 ul {
