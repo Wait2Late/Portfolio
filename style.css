@@ -56,8 +56,8 @@ hr {
     display: flex;
     flex-direction: row; /* Align items horizontally */
     width: 800px;
-    /*max-width: 100%; !* Ensure responsiveness *!*/
-    /*gap: 1rem; !* Add spacing between the boxes *!*/
+    max-width: 100%; /* Ensure responsiveness */
+    gap: 1rem; /* Add spacing between the boxes */
     padding: 1rem; /* Add padding inside the container */
 }
 
@@ -69,35 +69,39 @@ hr {
 }
 
 .skills {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* Three items per row */
-    gap: 2rem; /* Add spacing between items */
-    justify-items: center; /* Center items horizontally */
-    align-items: start; /* Align items at the top */
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+    gap: 1rem; /* Add spacing between the blocks */
+    justify-content: flex-start; /* Align blocks to the start */
 }
 
-ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Two items per row */
-    gap: 1rem; /* Add spacing between items */
-    justify-items: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-}
-
-ul li {
-    display: flex;
-    flex-direction: column; /* Stack icon and text vertically */
+.skills .item {
+    display: flex; /* Use flexbox for the items */
+    flex-direction: column; /* Stack the content vertically */
     align-items: center; /* Center align the content horizontally */
     text-align: center; /* Center align the text */
 }
 
-ul li svg {
-    width: 40px;
-    height: 40px; /* Set the size of the icon */
-    display: block; /* Ensure the SVG is treated as a block element */
-    margin-bottom: 0.5rem; /* Add spacing between the icon and text */
+.skills .item ul {
+    display: grid; /* Use flexbox for horizontal layout */
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 0.5rem; /* Add minimal spacing between list items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style-type: none; /* Remove bullet points */
 }
 
+.skills .item ul li {
+    display: flex; /* Use flexbox for the list items */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center align the content horizontally */
+    text-align: center; /* Center align the text */
+    margin: 0; /* Remove extra margin */
+    padding: 0; /* Remove extra padding */
+}
+
+.skills .item ul li svg {
+    width: 40px; /* Set the size of the icon */
+    height: 40px;
+    margin-bottom: 0.25rem; /* Minimal spacing between the icon and text */
+}
