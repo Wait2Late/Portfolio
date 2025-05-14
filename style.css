@@ -69,17 +69,24 @@ hr {
 }
 
 .skills {
-    display: flex; /* Use flexbox for horizontal layout */
-    flex-direction: row; /* Align items horizontally */
-    gap: 1rem; /* Add spacing between the blocks */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Responsive grid */
+    gap: 0.5rem; /* Add spacing between the blocks */
     align-items: flex-start;
     justify-content: center; /* Align blocks to the start */
-    padding: 1rem;
+    /*padding: 1rem;*/
+    flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
     .skills {
+        display: flex;
+        flex-direction: row; /* Stack items vertically on smaller screens */
         flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+        align-items: flex-start;
+        justify-content: center;
     }
 }
 
