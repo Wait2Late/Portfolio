@@ -70,19 +70,27 @@ hr {
 
 .skills {
     display: flex; /* Use flexbox for horizontal layout */
-    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+    flex-direction: row; /* Align items horizontally */
     gap: 1rem; /* Add spacing between the blocks */
-    justify-content: flex-start; /* Align blocks to the start */
+    align-items: flex-start;
+    justify-content: center; /* Align blocks to the start */
+    padding: 1rem;
 }
 
-.skills .item {
+@media (max-width: 768px) {
+    .skills {
+        flex-wrap: wrap;
+    }
+}
+
+.item {
     display: flex; /* Use flexbox for the items */
     flex-direction: column; /* Stack the content vertically */
     align-items: center; /* Center align the content horizontally */
     text-align: center; /* Center align the text */
 }
 
-.skills .item ul {
+ul {
     display: grid; /* Use flexbox for horizontal layout */
     grid-template-columns: repeat(2, 1fr); /* Two items per row */
     gap: 0.5rem; /* Add minimal spacing between list items */
@@ -91,7 +99,7 @@ hr {
     list-style-type: none; /* Remove bullet points */
 }
 
-.skills .item ul li {
+li {
     display: flex; /* Use flexbox for the list items */
     flex-direction: column; /* Stack icon and text vertically */
     align-items: center; /* Center align the content horizontally */
@@ -100,7 +108,7 @@ hr {
     padding: 0; /* Remove extra padding */
 }
 
-.skills .item ul li svg {
+svg {
     width: 40px; /* Set the size of the icon */
     height: 40px;
     margin-bottom: 0.25rem; /* Minimal spacing between the icon and text */
