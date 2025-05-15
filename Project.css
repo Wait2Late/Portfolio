@@ -1,0 +1,229 @@
+﻿body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container {
+    width: 800px;
+    max-width: 100%; /* Ensures responsiveness */
+    background-color: rgba(24, 50, 93, 0.65);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-sizing: border-box; /* Includes padding and border in the width */
+    padding: 1rem; /* Padding will not extend the width beyond 800px */
+    color: black;
+}
+
+.container > .info{
+    background-color: rgba(41, 102, 196, 0.65);
+    width: 90%;
+    max-width: 100%; /* Ensures responsiveness */
+    /*height: 200px;*/
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.description{
+    display: flex;
+    gap: 2rem;
+}
+
+.container .item {
+    flex: 1; /* Equal width for both items */
+    background-color: rgba(41, 102, 196, 0.65);
+    border-radius: 10px;
+    padding: 1rem;
+    /*text-align: left;*/
+}
+
+.carousel {
+    width: 100%; /* Ensures the carousel spans its container */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.carousel-inner {
+    display: flex; /* Keeps slides aligned horizontally */
+    flex-wrap: wrap; /* Prevents wrapping of slides */
+    width: 100%; /* Matches the container width */
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Each slide takes up 100% of the carousel width */
+    text-align: center; /* Centers text content */
+    min-height: 200px; /* Ensures consistent height */
+    word-wrap: break-word; /* Wraps long text */
+}
+
+.slide-description{
+    gap: 1rem;
+    min-height: 100px;
+    text-align: left;
+    padding: 2rem;
+    color: white;
+}
+
+hr {
+    border: none; /* Remove default border */
+    height: 2px; /* Set the thickness of the line */
+    background-color: #000000; /* Set the color of the line */
+    width: 100%; /* Ensure it spans the container */
+    margin: 1rem 0; /* Add spacing above and below */
+}
+
+/*.container .About{*/
+/*    display: flex;*/
+/*    !*background-color: rgba(24, 50, 93, 0.65);*!*/
+/*    flex-direction: column; !* Align items vertically *!*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    gap: 1rem; !* Optional: Add spacing between the items *!*/
+/*}*/
+
+/*.About > .item2{*/
+/*    flex: 1; !* Equal width for both items *!*/
+/*    background-color: rgba(50, 67, 96, 0.65);*/
+/*    border-radius: 20px;*/
+/*    padding: 1rem;*/
+/*    text-align: center;*/
+/*}*/
+/*.container.introduction {*/
+/*    display: flex;*/
+/*    flex-direction: row; !* Align items horizontally *!*/
+/*    width: 800px;*/
+/*    max-width: 100%; !* Ensure responsiveness *!*/
+/*    gap: 1rem; !* Add spacing between the boxes *!*/
+/*    padding: 1rem; !* Add padding inside the container *!*/
+/*}*/
+
+/*.container.introduction .profile-picture img {*/
+/*    max-width: 100%; !* Ensures the image scales down to fit the container *!*/
+/*    height: auto; !* Maintains the aspect ratio *!*/
+/*    border-radius: 20px; !* Optional: Makes the image circular *!*/
+/*    object-fit: cover; !* Ensures the image covers the container without distortion *!*/
+/*}*/
+
+/*.skills {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(5, 1fr); !* Responsive grid *!*/
+/*    gap: 0.5rem; !* Add spacing between the blocks *!*/
+/*    align-items: flex-start;*/
+/*    justify-content: center; !* Align blocks to the start *!*/
+/*    !*padding: 1rem;*!*/
+/*    flex-wrap: wrap;*/
+
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .skills {*/
+/*        display: flex;*/
+/*        flex-direction: row; !* Stack items vertically on smaller screens *!*/
+/*        flex-wrap: wrap;*/
+/*        gap: 1rem;*/
+/*        padding: 1rem;*/
+/*        align-items: flex-start;*/
+/*        justify-content: center;*/
+/*    }*/
+/*}*/
+
+/*.item {*/
+/*    display: flex; !* Use flexbox for the items *!*/
+/*    flex-direction: column; !* Stack the content vertically *!*/
+/*    align-items: center; !* Center align the content horizontally *!*/
+/*    text-align: center; !* Center align the text *!*/
+/*}*/
+
+
+
+/*.card-body ul{*/
+/*    background-color: rgba(50, 67, 96, 0.65);*/
+/*    border-radius: 10px;*/
+/*    color: white;*/
+/*    display: flex;*/
+/*    flex-direction: column; !* Stack items vertically on smaller screens *!*/
+/*    flex-wrap: wrap;*/
+/*    gap: 1rem;*/
+/*    padding: 1rem;*/
+/*    margin: 0; !* Remove default margin *!*/
+/*    align-items: flex-start;*/
+/*    justify-content: center;*/
+/*    list-style-type: circle;*/
+/*}*/
+
+/*.card > img{*/
+/*    max-width: 300px; !* Ensures the image scales down to fit the container *!*/
+/*    height: 200px; !* Maintains the aspect ratio *!*/
+/*    !*object-fit: cover; !* Ensures the image covers the container without distortion *!*!*/
+/*}*/
+
+/*svg {*/
+/*    width: 40px; !* Set the size of the icon *!*/
+/*    height: 40px;*/
+/*    margin-bottom: 0.25rem; !* Minimal spacing between the icon and text *!*/
+/*}*/
+
+.navbar.bg-transparent {
+    border: solid 1px black !important;
+    border-radius: 20px;
+}
+
+.navbar .dropdown-menu {
+    background-color: rgba(24, 50, 93, 0.65);
+
+    border: none; /* Remove border */
+}
+
+.navbar .dropdown-item {
+    color: white; /* Set text color to white */
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.8); /* Highlight color similar to white */
+    color: black; /* Change text color for contrast */
+}
+
+/*footer > ul {*/
+/*    display: grid; !* Use flexbox for horizontal layout *!*/
+/*    grid-template-columns: repeat(2, 1fr); !* Two items per row *!*/
+/*    gap: 0.5rem; !* Add minimal spacing between list items *!*/
+/*    padding: 0; !* Remove default padding *!*/
+/*    margin: 0; !* Remove default margin *!*/
+/*    list-style-type: none; !* Remove bullet points *!*/
+/*}*/
+
+footer li {
+    display: flex; /* Use flexbox for the list items */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center align the content horizontally */
+    text-align: center; /* Center align the text */
+    margin: 0; /* Remove extra margin */
+    padding: 0; /* Remove extra padding */
+}
+
+footer > ul{
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Space out the elements */
+    align-items: center; /* Center align items vertically */
+    padding: 1rem; /* Add padding for spacing */
+    border-top: 1px solid #000; /* Optional: Add a top border */
+    gap: 2rem;
+}
+
+footer h6 {
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 1rem;
+}
+
+
+
+
