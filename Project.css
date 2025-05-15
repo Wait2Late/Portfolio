@@ -79,6 +79,10 @@ hr {
     margin: 1rem 0; /* Add spacing above and below */
 }
 
+.transparentHR{
+    background-color: transparent;
+}
+
 /*.container .About{*/
 /*    display: flex;*/
 /*    !*background-color: rgba(24, 50, 93, 0.65);*!*/
