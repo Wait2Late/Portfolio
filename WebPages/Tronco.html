@@ -1,10 +1,279 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Tronco</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Legend of Tronco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Project.css">
 </head>
 <body>
+<div class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-transparent" aria-label="Third navbar example">
+        <div class="container-fluid"> <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="../index.html">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="About.html">About</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Game Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Epilogue.html">Epilogue</a></li>
+                            <li><a class="dropdown-item" href="Tronco.html">Tronco</a></li>
+                            <li><a class="dropdown-item" href="JimboDimbo.html">Jimbo & Dimbo</a></li>
+                            <li><a class="dropdown-item" href="Wooter.html">Wooter Scooter</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Solo Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://github.com/Wait2Late/Pokemon">Pokemon Battle Simulation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
+<div class="container introduction">
+    <h1>About this project</h1>
+    <hr>
+    <div class="Video">
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/838327150?h=167b645ec8" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+<!--        <iframe width="560" height="315" src="https://www.youtube.com/embed/l5i4VJ9l7Ow?si=gtay0B-9w5NvEfV9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+    </div>
+    <div class="info">
+        <h2>Project Info</h2>
+        <hr>
+        <div class="description">
+            <ul>
+                <li><strong>Main Roles:</strong> Systems & AI Programming</li>
+                <li><strong>Duration:</strong> 4 weeks</li>
+                <li><strong>Team Size:</strong> 9</li>
+                <li><strong>Unreal Engine 5.2</strong> - C++ & Blueprint</li>
+            </ul>
+            <iframe width="205" height="167" frameborder="0" src="https://itch.io/embed/2326396"><a href="https://olliejin.itch.io/epilogue"></a></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Wave Manager</h1>
+    <hr>
+    <p>In the early stages of development, I envisioned a roguelike experience with intense enemy encounters. To bring this vision to life, I implemented a robust system that dynamically spawns enemies around the player. This system was designed to be modular, allowing for easy integration with additional systems alongside the Wave Manager.</p>
+
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicators3" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description"></p>
+                    <iframe src="https://pastebin.com/embed_iframe/qqNcBCMV" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description"></p>
+                    <iframe src="https://pastebin.com/embed_iframe/qqNcBCMV" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <hr>
+    <p>I meticulously designed the code to accommodate various enemy types using an Enum. This flexible system enables the dynamic spawning of enemies at random positions surrounding the player. A crucial aspect of this implementation is its consideration for the boundaries of the navigation mesh, ensuring that spawned enemies seamlessly navigate within the designated play area.</p>
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicator4" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description">How the blueprint code looks like for the WaveManager.</p>
+                    <iframe src="https://blueprintue.com/render/e1asopyk/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">How the enemy spawn logic looks like when it then returns back to C++ side.</p>
+                    <iframe src="https://blueprintue.com/render/vdaxqd3e/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Set Data Table for the enemy spawn wave</p>
+                    <iframe src="https://blueprintue.com/render/3jmfxkhy/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">One of the examples of how it looks like</p>
+                    <img src="../Assets/Game%20Projects/GP4/image.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">
+                        How it first started. Requested my designer to group up the DataTable with its Stage type. Because of the benefit of utilizing said DataTable as a stand alone. </p>
+                    <img src="../Assets/Game%20Projects/GP4/image_1.png"  class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <hr>
+        <p style="color: white">My designer requested that we work with DataTables, and he meticulously laid out an extensive system in an Excel sheet. Everything needed to be compatible with blueprints for the convenience of our designers. Initially, I intended to implement everything in C++, but with that mindset discarded, almost everything had to be refactored to align with the blueprint. Frankly, it was a fun and rewarding challenge to overcome.</p>
+    </div>
+</div>
+
+<div class="container">
+    <h1>AI</h1>
+    <hr>
+    <p>In later development, I was assigned to assist our AI designer, who was tackling this task for the first time. Unfortunately, none of our team members had prior experience in AI development. Consequently, we decided to create a basic AI, which presented its own set of challenges. One significant hurdle was implementing a pooling system to efficiently manage the large number of enemies. Even after respawning, these enemies needed to perform actions such as moving, shooting, and standing still, adding an extra layer of complexity to the task.</p>
+
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicators1" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description">Enemy projectile still fired away even after it died. Which caused some huge headache for our AI designer. </p>
+                    <img src="../Assets/Game%20Projects/GP4/EnemyStillAliveBug.gif" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">The reason for this lies in my pooling system, where I had to devise a way to prevent the enemy from shooting even in its 'dead' state. To achieve this, I incorporated Set ActorTickEnabled(); into the EnemyBase script. By checking the IsActive status, I can determine whether the enemy is alive. This implementation not only addresses the specific issue but also streamlines the process of pooling enemies. I applied a similar approach in my third Future Games project, 'The Legend of Tronco.</p>
+                    <iframe src="https://pastebin.com/embed_iframe/7qvyKnrd" style="border:none;width:700px;height: 500px"></iframe>
+                    <iframe src="https://blueprintue.com/render/8yzxqn6h/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Now the enemy does not shoot even if it is dead. Which should be the case.</p>
+                    <img src="../Assets/Game%20Projects/GP4/EnemyStillAliveIsFixed2.gif" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <hr>
+    <p>While there were numerous instances where I had to debug, unfortunately, there isn't enough material to showcase as these issues were relatively small, and I wasn't able to record the debugging process.
+    </p>
+</div>
+
+<div class="container">
+    <h1>Pooling System</h1>
+    <hr>
+    <p>I find great satisfaction in pooling elements to achieve optimal performance, continuously exploring the expansive realm of optimization. The concept of pooling allows for a more efficient utilization of resources, contributing to an enhanced overall performance.</p>
+
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicators5" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description">
+                        The BeginPool method is integrated within the BeginPlay method, ensuring that the pooling mechanism is initiated at the start. On the other hand, the SpawnEnemy method is dedicated solely to spawning enemies. It includes a check to verify the availability of existing reserves before placing them in the world. </p>
+                    <h4 style="color: white; ">PoolsEnemy.cpp</h4>
+                    <iframe src="https://pastebin.com/embed_iframe/qhhWUs6Q" style="border:none;width:700px;height: 500px"></iframe>
+
+                    <hr class="transparentHR">
+
+                    <h4 style="color: white; ">PoolsEnemy.cpp</h4>
+                    <iframe src="https://pastebin.com/embed_iframe/sHkwk2Qe" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">With actors inheriting from the EnemyPools script, anyone can easily assign the individual pool size for each enemy. In the provided screenshot, the pool size is set to two for each enemy type, and a total of four enemies are spawned from the pool. Specifically, for this instance, I chose to spawn two ranged enemies</p>
+                    <img src="../Assets/Game%20Projects/GP4/HowMuchPoolSize.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Only the melee enemies are hidden as they are only pooled in the world.</p>
+                    <img src="../Assets/Game%20Projects/GP4/WhichEnemyIsHidden.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Typically, when enemies are defeated by the player, the DestroyActor method is employed. However, to align with my pooling system's objective of returning enemies to the pool, I've implemented a convenient method called Deactivate within the EnemyBase class. This method essentially broadcasts a signal indicating that this particular enemy is no longer active, facilitating its seamless return to the pool. </p>
+                    <img src="../Assets/Game%20Projects/GP4/DemonstrateDeactivateMethod.png" alt="" style="border:none;width:700px;height: 500px">
+
+                    <hr class="transparentHR">
+
+                    <p class="slide-description">This blueprint is associated with the parent of all enemies. The OnDeath(Health) event is triggered when an enemy perishes. Subsequently, it utilizes the Deactivate function, which is marked as a blueprint callable function. This design allows any enemy to invoke the Deactivate function, ensuring their return to the pool instead of being outright destroyed upon demise.</p>
+
+                    <hr class="transparentHR">
+
+                    <iframe src="https://blueprintue.com/render/tz4tnu0z/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Summary</h1>
+    <hr>
+    <p>This project has been incredibly eventful and stands as my proudest accomplishment to date. Our success can be attributed to clear communication and well-defined goals. My primary contributions involved crafting a robust pooling system, implementing a WaveManager to handle enemy spawning, and taking on the role of Quality Assurance (QA) for the AI aspects.</p>
+
+    <div>
+        <img src="../Assets/Game%20Projects/GP4/Epilogue.gif" alt="" style="border:none;width:700px;height: 500px">
+    </div>
+</div>
+
+<div class="container">
+    <footer>
+        <h6>Portfolio developed by Shakil Islam with HTML5 & CSS3</h6>
+        <ul>
+            <li>Copyright © 2024 Shakil Islam</li>
+            <li>Contact me at: <a href="mailto:shakil.ai@outlook.com">shakil.ai@outlook.com</a> </li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/shakil-i-8454b4198/">Shakil Islam</a></li>
+            <li>GitHub: <a href="https://github.com/Wait2Late">Github</a></li>
+            <li>Resume:<a href="../Assets/Images/shakil-islam-cv.pdf"> CV</a> </li>
+        </ul>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
