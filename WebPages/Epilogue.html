@@ -146,9 +146,9 @@
 </div>
 
 <div class="container">
-    <h1>Wave Manager</h1>
+    <h1>AI</h1>
     <hr>
-    <p>In the early stages of development, I envisioned a roguelike experience with intense enemy encounters. To bring this vision to life, I implemented a robust system that dynamically spawns enemies around the player. This system was designed to be modular, allowing for easy integration with additional systems alongside the Wave Manager.</p>
+    <p>In later development, I was assigned to assist our AI designer, who was tackling this task for the first time. Unfortunately, none of our team members had prior experience in AI development. Consequently, we decided to create a basic AI, which presented its own set of challenges. One significant hurdle was implementing a pooling system to efficiently manage the large number of enemies. Even after respawning, these enemies needed to perform actions such as moving, shooting, and standing still, adding an extra layer of complexity to the task.</p>
 
     <hr>
 
@@ -161,12 +161,17 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p class="slide-description"></p>
-                    <iframe src="https://pastebin.com/embed_iframe/qqNcBCMV" style="border:none;width:700px;height: 500px"></iframe>
+                    <p class="slide-description">Enemy projectile still fired away even after it died. Which caused some huge headache for our AI designer. </p>
+                    <img src="../Assets/Game%20Projects/GP4/EnemyStillAliveBug.gif" alt="" style="border:none;width:700px;height: 500px">
                 </div>
                 <div class="carousel-item">
-                    <p class="slide-description"></p>
-                    <iframe src="https://pastebin.com/embed_iframe/qqNcBCMV" style="border:none;width:700px;height: 500px"></iframe>
+                    <p class="slide-description">The reason for this lies in my pooling system, where I had to devise a way to prevent the enemy from shooting even in its 'dead' state. To achieve this, I incorporated Set ActorTickEnabled(); into the EnemyBase script. By checking the IsActive status, I can determine whether the enemy is alive. This implementation not only addresses the specific issue but also streamlines the process of pooling enemies. I applied a similar approach in my third Future Games project, 'The Legend of Tronco.</p>
+                    <iframe src="https://pastebin.com/embed_iframe/7qvyKnrd" style="border:none;width:700px;height: 500px"></iframe>
+                    <iframe src="https://blueprintue.com/render/8yzxqn6h/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Now the enemy does not shoot even if it is dead. Which should be the case.</p>
+                    <img src="../Assets/Game%20Projects/GP4/EnemyStillAliveIsFixed2.gif" alt="" style="border:none;width:700px;height: 500px">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
@@ -181,53 +186,8 @@
     </div>
 
     <hr>
-    <p>I meticulously designed the code to accommodate various enemy types using an Enum. This flexible system enables the dynamic spawning of enemies at random positions surrounding the player. A crucial aspect of this implementation is its consideration for the boundaries of the navigation mesh, ensuring that spawned enemies seamlessly navigate within the designated play area.</p>
-    <hr>
-
-    <div class="container">
-        <div id="carouselExampleIndicator2" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <p class="slide-description">How the blueprint code looks like for the WaveManager.</p>
-                    <iframe src="https://blueprintue.com/render/e1asopyk/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
-                </div>
-                <div class="carousel-item">
-                    <p class="slide-description">How the enemy spawn logic looks like when it then returns back to C++ side.</p>
-                    <iframe src="https://blueprintue.com/render/vdaxqd3e/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
-                </div>
-                <div class="carousel-item">
-                    <p class="slide-description">Set Data Table for the enemy spawn wave</p>
-                    <iframe src="https://blueprintue.com/render/3jmfxkhy/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
-                </div>
-                <div class="carousel-item">
-                    <p class="slide-description">One of the examples of how it looks like</p>
-                    <img src="../Assets/Game%20Projects/GP4/image.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <p class="slide-description">
-                        How it first started. Requested my designer to group up the DataTable with its Stage type. Because of the benefit of utilizing said DataTable as a stand alone. </p>
-                    <img src="../Assets/Game%20Projects/GP4/image_1.png"  class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <hr>
-        <p style="color: white">My designer requested that we work with DataTables, and he meticulously laid out an extensive system in an Excel sheet. Everything needed to be compatible with blueprints for the convenience of our designers. Initially, I intended to implement everything in C++, but with that mindset discarded, almost everything had to be refactored to align with the blueprint. Frankly, it was a fun and rewarding challenge to overcome.</p>
-    </div>
+    <p>While there were numerous instances where I had to debug, unfortunately, there isn't enough material to showcase as these issues were relatively small, and I wasn't able to record the debugging process.
+    </p>
 </div>
 <!--<div class="container">-->
 <!--    <h1>Skills</h1>-->
