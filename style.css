@@ -53,6 +53,7 @@ hr {
     padding: 1rem;
     text-align: center;
 }
+
 .container.introduction {
     display: flex;
     flex-direction: row; /* Align items horizontally */
