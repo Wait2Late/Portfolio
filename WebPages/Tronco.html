@@ -108,10 +108,24 @@
 </div>
 
 <div class="container">
-    <h1>AI</h1>
+    <h1>UI</h1>
     <hr>
-    <p>In later development, I was assigned to assist our AI designer, who was tackling this task for the first time. Unfortunately, none of our team members had prior experience in AI development. Consequently, we decided to create a basic AI, which presented its own set of challenges. One significant hurdle was implementing a pooling system to efficiently manage the large number of enemies. Even after respawning, these enemies needed to perform actions such as moving, shooting, and standing still, adding an extra layer of complexity to the task.</p>
+    <p>I found great enjoyment in exploring the distinct operational aspects of Unreal Engine, particularly its UI system, which differs significantly from Unity. The depth of Unreal Engine's UI system, coupled with its built-in visual scripting tool, presented a valuable opportunity for me to delve deeper into UI development. Attaching nodes to create our UI became a source of great enjoyment as I navigated the intricacies of this robust system.</p>
 
+    <hr class="transparentHR">
+
+    <div class="Un-ordered-List">
+        <h3>My Contributions for this project</h3>
+        <ul>
+            <li>Main menu</li>
+            <li>Options settings</li>
+            <li>Pause menu</li>
+            <li>A complex system to pick up an ability </li>
+            <li>Displaying health bar on enemies</li>
+            <li>Displaying positions on the enemies on the map</li>
+            <li>Displaying enemy count for the current wave of enemies</li>
+        </ul>
+    </div>
     <hr>
 
     <div class="container">
@@ -120,20 +134,44 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p class="slide-description">Enemy projectile still fired away even after it died. Which caused some huge headache for our AI designer. </p>
-                    <img src="../Assets/Game%20Projects/GP4/EnemyStillAliveBug.gif" alt="" style="border:none;width:700px;height: 500px">
+                    <p class="slide-description">Blueprint script for Main menu</p>
+                    <iframe src="https://blueprintue.com/render/5-_h8s6s/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
                 </div>
                 <div class="carousel-item">
-                    <p class="slide-description">The reason for this lies in my pooling system, where I had to devise a way to prevent the enemy from shooting even in its 'dead' state. To achieve this, I incorporated Set ActorTickEnabled(); into the EnemyBase script. By checking the IsActive status, I can determine whether the enemy is alive. This implementation not only addresses the specific issue but also streamlines the process of pooling enemies. I applied a similar approach in my third Future Games project, 'The Legend of Tronco.</p>
-                    <iframe src="https://pastebin.com/embed_iframe/7qvyKnrd" style="border:none;width:700px;height: 500px"></iframe>
-                    <iframe src="https://blueprintue.com/render/8yzxqn6h/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                    <p class="slide-description">
+                        Blueprint script for Options settings</p>
+                    <iframe src="https://blueprintue.com/render/sxsm5oaz/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
                 </div>
                 <div class="carousel-item">
-                    <p class="slide-description">Now the enemy does not shoot even if it is dead. Which should be the case.</p>
-                    <img src="../Assets/Game%20Projects/GP4/EnemyStillAliveIsFixed2.gif" alt="" style="border:none;width:700px;height: 500px">
+                    <p class="slide-description">Blueprint script for Pause menu</p>
+                    <iframe src="https://blueprintue.com/render/j_5cl7ss/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Just one of the logic to set up the gameplay ability</p>
+                    <iframe src="https://blueprintue.com/render/j_5cl7ss/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Setting up health bar for enemies</p>
+                    <img src="../Assets/Game%20Projects/GP3/Setting up Healthbar.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">An early beta prototype version. It calculates if any enemies is on the screen of the player. If it's false an indicator will be displayed. We do wish to know where the enemy are in these huge maps. That was one of the feedbacks we got.</p>
+                    <iframe src="https://blueprintue.com/render/5s8ikdp2/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+
+                    <hr class="transparentHR">
+
+                    <p class="slide-description">This blueprint script calculates the position of the enemy</p>
+                    <iframe src="https://blueprintue.com/render/tnlfuswv/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                    
+                    <hr class="transparentHR">
+
+                    <img src="../Assets/Game%20Projects/GP3/ArrowIndicatorsForEnemies.gif" alt="">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
@@ -146,10 +184,6 @@
             </button>
         </div>
     </div>
-
-    <hr>
-    <p>While there were numerous instances where I had to debug, unfortunately, there isn't enough material to showcase as these issues were relatively small, and I wasn't able to record the debugging process.
-    </p>
 </div>
 
 <div class="container">
