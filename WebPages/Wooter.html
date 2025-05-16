@@ -1,10 +1,320 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Wooter Scooter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Legend of Tronco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Project.css">
 </head>
 <body>
+<div class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-transparent" aria-label="Third navbar example">
+        <div class="container-fluid"> <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="../index.html">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="About.html">About</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Game Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Epilogue.html">Epilogue</a></li>
+                            <li><a class="dropdown-item" href="Tronco.html">Tronco</a></li>
+                            <li><a class="dropdown-item" href="JimboDimbo.html">Jimbo & Dimbo</a></li>
+                            <li><a class="dropdown-item" href="Wooter.html">Wooter Scooter</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Solo Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://github.com/Wait2Late/Pokemon">Pokemon Battle Simulation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
+<div class="container introduction">
+    <h1>About this project</h1>
+    <hr>
+
+    <p><strong>Wooter Scooter</strong>, is an inspired endless runner game that offers a short, fast-paced experience with a focus on scoring high. The gameplay revolves around collecting wooter to fill the tank and gain additional speed.</p>
+
+    <div class="Video">
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/838327150?h=167b645ec8" width="680" height="400" frameborder="0"    allowfullscreen></iframe>
+    </div>
+    <div class="info">
+        <h2>Project Info</h2>
+        <hr>
+        <div class="description">
+            <ul>
+                <li><strong>Main Roles:</strong> Systems & UI Programming</li>
+                <li><strong>Duration:</strong> 7 weeks</li>
+                <li><strong>Team Size:</strong> 10</li>
+                <li><strong>Unreal Engine 5.1</strong> - C++ & Blueprint</li>
+            </ul>
+            <iframe width="205" height="167" frameborder="0" src="https://itch.io/embed/2135135"><a href="https://ooga-hoot-hooligans.itch.io/the-legend-of-tronco">The Legend Of Tronco by Ooga-Hoot Hooligans</a></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Pooling System</h1>
+    <hr>
+    <p>In the early stages of development, our vision for 'The Legend of Tronco' involved creating a hack-and-slash roguelite, necessitating the establishment of a system for spawning enemies across the map. To accommodate a wide variety of enemy quantities, we implemented a pooling system—a task that fell under my responsibilities.</p>
+
+    <p>My decision to undertake this task was rooted in my previous experience with a similar system, driven by the ambition to identify areas for improvement. However, the journey wasn't as straightforward as I had hoped. Numerous revisions and extensive refactoring were required to optimize the system for the benefit of both my designers and the overall game. In the upcoming sections, I'll delve into these transformative changes and the iterative process that led to a more refined implementation.</p>
+
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicators3" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description"><strong>PoolsCharacter.h</strong>, this script duty is to pool an actor from the character class. </p>
+                    <iframe src="https://pastebin.com/embed_iframe/Jzfa4xZT" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">In the <strong>PoolsCharacter.cpp</strong> file, the <strong>PoolAtBegin</strong> method searches for instances of <strong>PooledCharacter</strong> in the world. This class represents the enemy type slated for pooling. Subsequently, the method unleashes these pooled objects into the world using the <strong>SpawnPooledObject</strong> method.</p>
+                    <iframe src="https://pastebin.com/embed_iframe/xSvsTWaa" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description"><strong>PooledCharacter.cpp</strong>, the character returns back to the pool from its own base class script via the method <strong>Deactivate.</strong> </p>
+                    <iframe src="https://pastebin.com/embed_iframe/xHrBSAAS" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">I've configured the pool size for both ranged and melee enemies to be two each. However, during gameplay, I've restricted the spawning of only one melee enemy, concealing the other with the remaining two ranged enemies.</p>
+                    <img src="../Assets/Game%20Projects/GP3/WhichIsHidden_GP3.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>User Interface</h1>
+    <hr>
+    <p>I found great enjoyment in exploring the distinct operational aspects of Unreal Engine, particularly its UI system, which differs significantly from Unity. The depth of Unreal Engine's UI system, coupled with its built-in visual scripting tool, presented a valuable opportunity for me to delve deeper into UI development. Attaching nodes to create our UI became a source of great enjoyment as I navigated the intricacies of this robust system.</p>
+
+    <hr class="transparentHR">
+
+    <div class="Un-ordered-List">
+        <h3>My Contributions for this project</h3>
+        <ul>
+            <li>Main menu</li>
+            <li>Options settings</li>
+            <li>Pause menu</li>
+            <li>A complex system to pick up an ability </li>
+            <li>Displaying health bar on enemies</li>
+            <li>Displaying positions on the enemies on the map</li>
+            <li>Displaying enemy count for the current wave of enemies</li>
+        </ul>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicators1" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description">Blueprint script for Main menu</p>
+                    <iframe src="https://blueprintue.com/render/5-_h8s6s/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">
+                        Blueprint script for Options settings</p>
+                    <iframe src="https://blueprintue.com/render/sxsm5oaz/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Blueprint script for Pause menu</p>
+                    <iframe src="https://blueprintue.com/render/j_5cl7ss/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Just one of the logic to set up the gameplay ability</p>
+                    <iframe src="https://blueprintue.com/render/j_5cl7ss/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Setting up health bar for enemies</p>
+                    <img src="../Assets/Game%20Projects/GP3/Setting up Healthbar.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">An early beta prototype version. It calculates if any enemies is on the screen of the player. If it's false an indicator will be displayed. We do wish to know where the enemy are in these huge maps. That was one of the feedbacks we got.</p>
+                    <iframe src="https://blueprintue.com/render/5s8ikdp2/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+
+                    <hr class="transparentHR">
+
+                    <p class="slide-description">This blueprint script calculates the position of the enemy</p>
+                    <iframe src="https://blueprintue.com/render/tnlfuswv/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+
+                    <hr class="transparentHR">
+
+                    <img src="../Assets/Game%20Projects/GP3/ArrowIndicatorsForEnemies.gif" alt="">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>General System Programming</h1>
+    <hr>
+    <p>I also took charge of a few smaller yet critical tasks, such as the implementation of the save system. To provide context, when the player ascends to the next level in our roguelite, a new map/level loads, leading to the destruction of all assets. To ensure the preservation of key features, we needed a robust save and load mechanism.</p>
+
+    <p>Additionally, I oversaw and assisted in implementing the logic for a narrative cinematic cutscene. While it functions solely as an intro, it adds depth to the overall gaming experience.</p>
+
+    <div class="Un-ordered-List">
+        <h3>My Contributions for this project</h3>
+        <ul>
+            <li>Game Instance (Save & Load system)</li>
+            <li>Interfaces</li>
+            <li>Gamepad and keyboard support</li>
+            <li>Cinematic QA</li>
+        </ul>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicators5" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description">I opted to employ the Game Instance for loading and saving our crucial variables, and in the process, I gained valuable insights into the effective utilization of Interfaces. Employing a straightforward getter and setter methodology, I could efficiently store variables and arrays, streamlining the process of managing critical game data.</p>
+                    <img src="../Assets/Game Projects/GP3/Game instance.png" alt="" style="border:none;width:700px;height: 500px">
+
+                    <hr class="transparentHR">
+
+                    <p class="slide-description">The player character, <strong>BP_HeroCharacter_Base</strong>, serves as our controllable character. During the Begin Play event, the player stores information in <strong>Skills and Active Passives</strong>. Notably, there's a custom event named <strong>'Lose Everything'</strong> that triggers exclusively when the player dies. During this event, <strong>all Active Passives</strong> are cleared, while <strong>Skills</strong> remain intact.</p>
+
+                    <img src="../Assets/Game Projects/GP3/ExampleGIInHeroBase.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Throughout this game project, I've developed a deep appreciation for utilizing <strong>Interfaces</strong>. Not only does it contribute to saving memory and enhancing performance compared to Cast To nodes, but it also streamlines the processing, making it more comprehensible for the engine. I've personally <strong>implemented several interfaces</strong>, and I've encouraged my team to embrace this approach, resulting in a reduction of Cast To nodes in favor of interfaces. It's rewarding to see that the team has adopted this practice, evident in the increased utilization of interfaces in our project.</p>
+                    <img src="../Assets/Game%20Projects/GP3/PlayerInterfaces.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">One of the intricate yet intuitively designed systems involves the player choosing a passive ability after completing a wave. The process is initiated through a custom event called <strong>'Randomize Abilities,'</strong> which unfolds within a blueprint widget, allowing players to select their desired passive ability.</p>
+                    <iframe src="https://blueprintue.com/render/0hipb5dj/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+
+                    <p class="slide-description">The <strong>'Pick a passive ability'</strong> event triggers when the player successfully defeats all enemies in a wave, part of multiple waves. Notably, these acquired passive abilities are not saved in the event of the player's death</p>
+
+                    <img src="../Assets/Game%20Projects/GP3/PickPassiveAbility.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description"><strong>Randomize abilities</strong> is this large with even more to come inside functions.</p>
+                    <iframe src="https://blueprintue.com/render/pw7z8dh9/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+
+                    <hr class="transparentHR">
+
+                    <p class="slide-description">Within the <strong>'Randomize Three Passives'</strong> function, a straightforward process unfolds: it extracts elements from a data table named <strong>'PassiveTable'</strong>, then continues to randomize until three unique ones are obtained, as illustrated in the previous slide.</p>
+
+                    <hr class="transparentHR">
+
+                    <iframe src="https://blueprintue.com/render/j2s-a8oe/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Returning to the <strong>Event Graph</strong>, the system has successfully assigned three unique passive names from the data table, fulfilling our requirements. Upon the player's selection of one passive, the game resumes with the <strong>'Resume Game'</strong> function. The <strong>'Set Name'</strong> interface is then employed to relay this information back to the player blueprint.</p>
+                    <img src="../Assets/Game Projects/GP3/Resume Game.png" alt="" style="border:none;width:700px;height: 500px">
+
+                    <p class="slide-description">With the correct Row name from the <strong>'Passive Table'</strong> data table, we incorporate the name into the UI using <strong>'Add Ability List To UI.'</strong> This process is followed by implementing the logic behind the buffs with <strong>'Add Passive By Name.'</strong> Finally, the game resumes with <strong>'Start Wave'</strong> once again.</p>
+                    <iframe src="https://blueprintue.com/render/dmj5--9j/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">My team expressed the need for gamepad support, marking one of my most challenging and daunting experiences to date. It provided insights into the complexities of maintaining compatibility with both keyboard and gamepad inputs.</p>
+
+                    <p class="slide-description">To address this, I leveraged Epic Games' own plugin, the <strong>'Common UI Plugin,'</strong> for gamepad support. While it offered a straightforward solution, achieving a balance with keyboard support posed challenges. The intricacy arose when a control scheme worked seamlessly, but the other ceased to function entirely.</p>
+
+                    <p class="slide-description">After experimenting with various ideas, I successfully implemented a solution using two <strong>boolean</strong> variables: <strong>'Is Using Gamepad'</strong> and <strong>'Is Using Keyboard.'</strong> These variables dynamically change based on whether the player activates the gamepad or keyboard, ensuring a seamless transition between control schemes."</p>
+                    <iframe src="https://blueprintue.com/render/mpitws-5/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+
+                    <hr class="transparentHR">
+
+                    <p class="slide-description">One of my examples of utilizing my booleans for <strong>gamepad</strong> or <strong>keyboard</strong> support. The thing is keyboard did not like using the functionality from <strong>Common UI Plugin.</strong> That is why I had to separate between the two.</p>
+
+                    <hr class="transparentHR">
+
+                    <iframe src="https://blueprintue.com/render/mpitws-5/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Lastly I collaborated with one of our artists. They did the cinematic while I supervised and managed so no bugs, inconsistencies will befell our project. </p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Summary</h1>
+    <hr>
+    <p>This project has been an incredible learning experience! I was unsure and concerned about my first Unreal project. In the beginning of the project I vowed that I will cumulate more experience to improve my understand of Unreal Engine. That was my goal and I fortunately feel like I grew a step bigger.</p>
+
+    <div>
+        <img src="../Assets/Game%20Projects/GP3/LogoMainMenu.gif" alt="" style="border:none;width:700px;height: 500px">
+    </div>
+</div>
+
+<div class="container">
+    <footer>
+        <h6>Portfolio developed by Shakil Islam with HTML5 & CSS3</h6>
+        <ul>
+            <li>Copyright © 2024 Shakil Islam</li>
+            <li>Contact me at: <a href="mailto:shakil.ai@outlook.com">shakil.ai@outlook.com</a> </li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/shakil-i-8454b4198/">Shakil Islam</a></li>
+            <li>GitHub: <a href="https://github.com/Wait2Late">Github</a></li>
+            <li>Resume:<a href="../Assets/Images/shakil-islam-cv.pdf"> CV</a> </li>
+        </ul>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
