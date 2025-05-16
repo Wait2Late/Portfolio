@@ -63,7 +63,9 @@
 <div class="container">
     <h1>Wave Manager</h1>
     <hr>
-    <p>In the early stages of development, I envisioned a roguelike experience with intense enemy encounters. To bring this vision to life, I implemented a robust system that dynamically spawns enemies around the player. This system was designed to be modular, allowing for easy integration with additional systems alongside the Wave Manager.</p>
+    <p>In the early stages of development, our vision for 'The Legend of Tronco' involved creating a hack-and-slash roguelite, necessitating the establishment of a system for spawning enemies across the map. To accommodate a wide variety of enemy quantities, we implemented a pooling system—a task that fell under my responsibilities.</p>
+
+    <p>My decision to undertake this task was rooted in my previous experience with a similar system, driven by the ambition to identify areas for improvement. However, the journey wasn't as straightforward as I had hoped. Numerous revisions and extensive refactoring were required to optimize the system for the benefit of both my designers and the overall game. In the upcoming sections, I'll delve into these transformative changes and the iterative process that led to a more refined implementation.</p>
 
     <hr>
 
@@ -73,15 +75,24 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p class="slide-description"></p>
-                    <iframe src="https://pastebin.com/embed_iframe/qqNcBCMV" style="border:none;width:700px;height: 500px"></iframe>
+                    <p class="slide-description"><strong>PoolsCharacter.h</strong>, this script duty is to pool an actor from the character class. </p>
+                    <iframe src="https://pastebin.com/embed_iframe/Jzfa4xZT" style="border:none;width:700px;height: 500px"></iframe>
                 </div>
                 <div class="carousel-item">
-                    <p class="slide-description"></p>
-                    <iframe src="https://pastebin.com/embed_iframe/qqNcBCMV" style="border:none;width:700px;height: 500px"></iframe>
+                    <p class="slide-description">In the <strong>PoolsCharacter.cpp</strong> file, the <strong>PoolAtBegin</strong> method searches for instances of <strong>PooledCharacter</strong> in the world. This class represents the enemy type slated for pooling. Subsequently, the method unleashes these pooled objects into the world using the <strong>SpawnPooledObject</strong> method.</p>
+                    <iframe src="https://pastebin.com/embed_iframe/xSvsTWaa" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description"><strong>PooledCharacter.cpp</strong>, the character returns back to the pool from its own base class script via the method <strong>Deactivate.</strong> </p>
+                    <iframe src="https://pastebin.com/embed_iframe/xHrBSAAS" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">I've configured the pool size for both ranged and melee enemies to be two each. However, during gameplay, I've restricted the spawning of only one melee enemy, concealing the other with the remaining two ranged enemies.</p>
+                    <img src="../Assets/Game%20Projects/GP3/WhichIsHidden_GP3.png" alt="" style="border:none;width:700px;height: 500px">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
@@ -93,55 +104,6 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
-
-    <hr>
-    <p>I meticulously designed the code to accommodate various enemy types using an Enum. This flexible system enables the dynamic spawning of enemies at random positions surrounding the player. A crucial aspect of this implementation is its consideration for the boundaries of the navigation mesh, ensuring that spawned enemies seamlessly navigate within the designated play area.</p>
-    <hr>
-
-    <div class="container">
-        <div id="carouselExampleIndicator4" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicator4" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <p class="slide-description">How the blueprint code looks like for the WaveManager.</p>
-                    <iframe src="https://blueprintue.com/render/e1asopyk/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
-                </div>
-                <div class="carousel-item">
-                    <p class="slide-description">How the enemy spawn logic looks like when it then returns back to C++ side.</p>
-                    <iframe src="https://blueprintue.com/render/vdaxqd3e/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
-                </div>
-                <div class="carousel-item">
-                    <p class="slide-description">Set Data Table for the enemy spawn wave</p>
-                    <iframe src="https://blueprintue.com/render/3jmfxkhy/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
-                </div>
-                <div class="carousel-item">
-                    <p class="slide-description">One of the examples of how it looks like</p>
-                    <img src="../Assets/Game%20Projects/GP4/image.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <p class="slide-description">
-                        How it first started. Requested my designer to group up the DataTable with its Stage type. Because of the benefit of utilizing said DataTable as a stand alone. </p>
-                    <img src="../Assets/Game%20Projects/GP4/image_1.png"  class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicator2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <hr>
-        <p style="color: white">My designer requested that we work with DataTables, and he meticulously laid out an extensive system in an Excel sheet. Everything needed to be compatible with blueprints for the convenience of our designers. Initially, I intended to implement everything in C++, but with that mindset discarded, almost everything had to be refactored to align with the blueprint. Frankly, it was a fun and rewarding challenge to overcome.</p>
     </div>
 </div>
 
