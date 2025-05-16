@@ -61,7 +61,7 @@
 </div>
 
 <div class="container">
-    <h1>Wave Manager</h1>
+    <h1>Pooling System</h1>
     <hr>
     <p>In the early stages of development, our vision for 'The Legend of Tronco' involved creating a hack-and-slash roguelite, necessitating the establishment of a system for spawning enemies across the map. To accommodate a wide variety of enemy quantities, we implemented a pooling system—a task that fell under my responsibilities.</p>
 
@@ -108,7 +108,7 @@
 </div>
 
 <div class="container">
-    <h1>UI</h1>
+    <h1>User Interface</h1>
     <hr>
     <p>I found great enjoyment in exploring the distinct operational aspects of Unreal Engine, particularly its UI system, which differs significantly from Unity. The depth of Unreal Engine's UI system, coupled with its built-in visual scripting tool, presented a valuable opportunity for me to delve deeper into UI development. Attaching nodes to create our UI became a source of great enjoyment as I navigated the intricacies of this robust system.</p>
 
@@ -187,10 +187,21 @@
 </div>
 
 <div class="container">
-    <h1>Pooling System</h1>
+    <h1>General System Programming</h1>
     <hr>
-    <p>I find great satisfaction in pooling elements to achieve optimal performance, continuously exploring the expansive realm of optimization. The concept of pooling allows for a more efficient utilization of resources, contributing to an enhanced overall performance.</p>
+    <p>I also took charge of a few smaller yet critical tasks, such as the implementation of the save system. To provide context, when the player ascends to the next level in our roguelite, a new map/level loads, leading to the destruction of all assets. To ensure the preservation of key features, we needed a robust save and load mechanism.</p>
 
+    <p>Additionally, I oversaw and assisted in implementing the logic for a narrative cinematic cutscene. While it functions solely as an intro, it adds depth to the overall gaming experience.</p>
+
+    <div class="Un-ordered-List">
+        <h3>My Contributions for this project</h3>
+        <ul>
+            <li>Game Instance (Save & Load system)</li>
+            <li>Interfaces</li>
+            <li>Gamepad and keyboard support</li>
+            <li>Cinematic QA</li>
+        </ul>
+    </div>
     <hr>
 
     <div class="container">
@@ -200,38 +211,70 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="6" aria-label="Slide 7"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p class="slide-description">
-                        The BeginPool method is integrated within the BeginPlay method, ensuring that the pooling mechanism is initiated at the start. On the other hand, the SpawnEnemy method is dedicated solely to spawning enemies. It includes a check to verify the availability of existing reserves before placing them in the world. </p>
-                    <h4 style="color: white; ">PoolsEnemy.cpp</h4>
-                    <iframe src="https://pastebin.com/embed_iframe/qhhWUs6Q" style="border:none;width:700px;height: 500px"></iframe>
+                    <p class="slide-description">I opted to employ the Game Instance for loading and saving our crucial variables, and in the process, I gained valuable insights into the effective utilization of Interfaces. Employing a straightforward getter and setter methodology, I could efficiently store variables and arrays, streamlining the process of managing critical game data.</p>
+                    <img src="../Assets/Game Projects/GP3/Game instance.png" alt="" style="border:none;width:700px;height: 500px">
 
                     <hr class="transparentHR">
 
-                    <h4 style="color: white; ">PoolsEnemy.cpp</h4>
-                    <iframe src="https://pastebin.com/embed_iframe/sHkwk2Qe" style="border:none;width:700px;height: 500px"></iframe>
+                    <p class="slide-description">The player character, <strong>BP_HeroCharacter_Base</strong>, serves as our controllable character. During the Begin Play event, the player stores information in <strong>Skills and Active Passives</strong>. Notably, there's a custom event named <strong>'Lose Everything'</strong> that triggers exclusively when the player dies. During this event, <strong>all Active Passives</strong> are cleared, while <strong>Skills</strong> remain intact.</p>
+
+                    <img src="../Assets/Game Projects/GP3/ExampleGIInHeroBase.png" alt="" style="border:none;width:700px;height: 500px">
                 </div>
                 <div class="carousel-item">
-                    <p class="slide-description">With actors inheriting from the EnemyPools script, anyone can easily assign the individual pool size for each enemy. In the provided screenshot, the pool size is set to two for each enemy type, and a total of four enemies are spawned from the pool. Specifically, for this instance, I chose to spawn two ranged enemies</p>
-                    <img src="../Assets/Game%20Projects/GP4/HowMuchPoolSize.png" alt="" style="border:none;width:700px;height: 500px">
+                    <p class="slide-description">Throughout this game project, I've developed a deep appreciation for utilizing <strong>Interfaces</strong>. Not only does it contribute to saving memory and enhancing performance compared to Cast To nodes, but it also streamlines the processing, making it more comprehensible for the engine. I've personally <strong>implemented several interfaces</strong>, and I've encouraged my team to embrace this approach, resulting in a reduction of Cast To nodes in favor of interfaces. It's rewarding to see that the team has adopted this practice, evident in the increased utilization of interfaces in our project.</p>
+                    <img src="../Assets/Game%20Projects/GP3/PlayerInterfaces.png" alt="" style="border:none;width:700px;height: 500px">
                 </div>
                 <div class="carousel-item">
-                    <p class="slide-description">Only the melee enemies are hidden as they are only pooled in the world.</p>
-                    <img src="../Assets/Game%20Projects/GP4/WhichEnemyIsHidden.png" alt="" style="border:none;width:700px;height: 500px">
+                    <p class="slide-description">One of the intricate yet intuitively designed systems involves the player choosing a passive ability after completing a wave. The process is initiated through a custom event called <strong>'Randomize Abilities,'</strong> which unfolds within a blueprint widget, allowing players to select their desired passive ability.</p>
+                    <iframe src="https://blueprintue.com/render/0hipb5dj/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+
+                    <p class="slide-description">The <strong>'Pick a passive ability'</strong> event triggers when the player successfully defeats all enemies in a wave, part of multiple waves. Notably, these acquired passive abilities are not saved in the event of the player's death</p>
+
+                    <img src="../Assets/Game%20Projects/GP3/PickPassiveAbility.png" alt="" style="border:none;width:700px;height: 500px">
                 </div>
                 <div class="carousel-item">
-                    <p class="slide-description">Typically, when enemies are defeated by the player, the DestroyActor method is employed. However, to align with my pooling system's objective of returning enemies to the pool, I've implemented a convenient method called Deactivate within the EnemyBase class. This method essentially broadcasts a signal indicating that this particular enemy is no longer active, facilitating its seamless return to the pool. </p>
-                    <img src="../Assets/Game%20Projects/GP4/DemonstrateDeactivateMethod.png" alt="" style="border:none;width:700px;height: 500px">
+                    <p class="slide-description"><strong>Randomize abilities</strong> is this large with even more to come inside functions.</p>
+                    <iframe src="https://blueprintue.com/render/pw7z8dh9/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
 
                     <hr class="transparentHR">
 
-                    <p class="slide-description">This blueprint is associated with the parent of all enemies. The OnDeath(Health) event is triggered when an enemy perishes. Subsequently, it utilizes the Deactivate function, which is marked as a blueprint callable function. This design allows any enemy to invoke the Deactivate function, ensuring their return to the pool instead of being outright destroyed upon demise.</p>
+                    <p class="slide-description">Within the <strong>'Randomize Three Passives'</strong> function, a straightforward process unfolds: it extracts elements from a data table named <strong>'PassiveTable'</strong>, then continues to randomize until three unique ones are obtained, as illustrated in the previous slide.</p>
 
                     <hr class="transparentHR">
 
-                    <iframe src="https://blueprintue.com/render/tz4tnu0z/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                    <iframe src="https://blueprintue.com/render/j2s-a8oe/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Returning to the <strong>Event Graph</strong>, the system has successfully assigned three unique passive names from the data table, fulfilling our requirements. Upon the player's selection of one passive, the game resumes with the <strong>'Resume Game'</strong> function. The <strong>'Set Name'</strong> interface is then employed to relay this information back to the player blueprint.</p>
+                    <img src="../Assets/Game Projects/GP3/Resume Game.png" alt="" style="border:none;width:700px;height: 500px">
+
+                    <p class="slide-description">With the correct Row name from the <strong>'Passive Table'</strong> data table, we incorporate the name into the UI using <strong>'Add Ability List To UI.'</strong> This process is followed by implementing the logic behind the buffs with <strong>'Add Passive By Name.'</strong> Finally, the game resumes with <strong>'Start Wave'</strong> once again.</p>
+                    <iframe src="https://blueprintue.com/render/dmj5--9j/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">My team expressed the need for gamepad support, marking one of my most challenging and daunting experiences to date. It provided insights into the complexities of maintaining compatibility with both keyboard and gamepad inputs.</p>
+
+                    <p class="slide-description">To address this, I leveraged Epic Games' own plugin, the <strong>'Common UI Plugin,'</strong> for gamepad support. While it offered a straightforward solution, achieving a balance with keyboard support posed challenges. The intricacy arose when a control scheme worked seamlessly, but the other ceased to function entirely.</p>
+
+                    <p class="slide-description">After experimenting with various ideas, I successfully implemented a solution using two <strong>boolean</strong> variables: <strong>'Is Using Gamepad'</strong> and <strong>'Is Using Keyboard.'</strong> These variables dynamically change based on whether the player activates the gamepad or keyboard, ensuring a seamless transition between control schemes."</p>
+                    <iframe src="https://blueprintue.com/render/mpitws-5/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+
+                    <hr class="transparentHR">
+
+                    <p class="slide-description">One of my examples of utilizing my booleans for <strong>gamepad</strong> or <strong>keyboard</strong> support. The thing is keyboard did not like using the functionality from <strong>Common UI Plugin.</strong> That is why I had to separate between the two.</p>
+
+                    <hr class="transparentHR">
+
+                    <iframe src="https://blueprintue.com/render/mpitws-5/" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">Lastly I collaborated with one of our artists. They did the cinematic while I supervised and managed so no bugs, inconsistencies will befell our project. </p>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">
@@ -249,10 +292,10 @@
 <div class="container">
     <h1>Summary</h1>
     <hr>
-    <p>This project has been incredibly eventful and stands as my proudest accomplishment to date. Our success can be attributed to clear communication and well-defined goals. My primary contributions involved crafting a robust pooling system, implementing a WaveManager to handle enemy spawning, and taking on the role of Quality Assurance (QA) for the AI aspects.</p>
+    <p>This project has been an incredible learning experience! I was unsure and concerned about my first Unreal project. In the beginning of the project I vowed that I will cumulate more experience to improve my understand of Unreal Engine. That was my goal and I fortunately feel like I grew a step bigger.</p>
 
     <div>
-        <img src="../Assets/Game%20Projects/GP4/Epilogue.gif" alt="" style="border:none;width:700px;height: 500px">
+        <img src="../Assets/Game%20Projects/GP3/LogoMainMenu.gif" alt="" style="border:none;width:700px;height: 500px">
     </div>
 </div>
 
