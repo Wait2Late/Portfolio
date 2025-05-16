@@ -1,10 +1,166 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Jimbo & Dimbo Space Adventure</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dimbo & Jimbo's Space Adventure</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Project.css">
 </head>
 <body>
+<div class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-transparent" aria-label="Third navbar example">
+        <div class="container-fluid"> <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="../index.html">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="About.html">About</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Game Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Epilogue.html">Epilogue</a></li>
+                            <li><a class="dropdown-item" href="Tronco.html">Tronco</a></li>
+                            <li><a class="dropdown-item" href="JimboDimbo.html">Jimbo & Dimbo</a></li>
+                            <li><a class="dropdown-item" href="Wooter.html">Wooter Scooter</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Solo Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://github.com/Wait2Late/Pokemon">Pokemon Battle Simulation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
+<div class="container introduction">
+    <h1>About this project</h1>
+    <hr>
+
+    <p>Jimbo and Dimbo's Space Adventure is about a First-Person-Shooter, co-op and puzzle adventure. The theme is about cooperation. The game can not be beaten as lone player. So together we are all strong with Jimbo and Dimbo!</p>
+    <div class="Video">
+        <iframe width="680" height="400" src="https://www.youtube.com/embed/-jKONXfCjoM?si=odRFng7Ned51kDy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="info">
+        <h2>Project Info</h2>
+        <hr>
+        <div class="description">
+            <ul>
+                <li><strong>Main Roles:</strong> Systems and Time event system programmer</li>
+                <li><strong>Duration:</strong> 4 weeks</li>
+                <li><strong>Team Size:</strong> 10</li>
+                <li><strong>Unity 2022.2.4f1</strong> - C#</li>
+            </ul>
+            <iframe width="205" height="167" frameborder="0" src="https://itch.io/embed/1984090" width="208"><a href="https://futuregames.itch.io/jimbo-dimbo-space-adventure">Jimbo &amp; Dimbo Space Adventure by Futuregames</a></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Pooling System</h1>
+    <hr>
+    <p>In the initial stages of development, our aim was to craft a game that truly stood out from the crowd of other projects. The inspiration for this endeavor struck me when our teacher revealed a novel enemy spawning and management system. It was a fresh and exciting concept that I eagerly embraced, setting the course for our project's distinctive approach.</p>
+
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicators3" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description">This marks my initial attempt at crafting a pooling system for our game project. Looking back, I can truly appreciate how chaotic and messy the code appears. I've decided to keep it as a memorable piece, a reminder of the progress I've made. </p>
+
+                    <p class="slide-description">The script takes in a maximum number of enemies and determines the events in which these enemies should spawn. Despite its messy appearance, I thought this approach would simplify the process of placing event calls. This script was particularly significant as I was in charge of our day and night cycle.</p>
+                    <iframe src="https://pastebin.com/embed_iframe/wUCJRG2r" style="border:none;width:700px;height: 500px"></iframe>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Day and Night Cycle event System</h1>
+
+    <hr>
+
+    <p>This marked an exciting turning point for me. I took on the role of one of the programmers responsible for implementing a Day and Night Cycle. This cycle not only adds a dynamic element to the game but also serves as the backdrop for spawning enemies integrating seamlessly with the EnemyPool script.</p>
+
+    <hr>
+
+    <div class="container">
+        <div id="carouselExampleIndicators1" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="slide-description">I really now love using ScriptableObject! I did not use much in my spare time projects. However it woke me up to utilize ScriptableObjects! The Day and Night Cycle is made of using ScriptableObject as a Data Asset</p>
+                    <iframe src="https://pastebin.com/embed_iframe/v3uvH9mV" scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">This is the messy script that handle events for days and night. It was truly a great learning experience to understand how to write and refactor cleaner code. This script allowed the artist to place their colors for the night sky to change alongside the environment.</p>
+                    <iframe src="https://pastebin.com/embed_iframe/4cT7ydNe"  scrolling="no" allowfullscreen width="700" height="500"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <p class="slide-description">How it looks like on day time. </p>
+                    <img src="../Assets/Game%20Projects/GP2/Day.png" alt="" style="border:none;width:700px;height: 500px">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Summary</h1>
+    <hr>
+    <p>I found myself much more comfortable working on this project compared to the previous one in Unity. It seems I've leveled up a bit in my skills.</p>
+
+    <p>The experience was enjoyable as I collaborated closely with my group members. We worked together, reaching out for help and assistance when needed. My motivation to improve my craft remained high throughout the project.</p>
+
+    <div>
+        <img src="../Assets/Game%20Projects/GP2/MainMenu.png" alt="" style="border:none;width:700px;height: 500px">
+    </div>
+</div>
+
+<div class="container">
+    <footer>
+        <h6>Portfolio developed by Shakil Islam with HTML5 & CSS3</h6>
+        <ul>
+            <li>Copyright © 2024 Shakil Islam</li>
+            <li>Contact me at: <a href="mailto:shakil.ai@outlook.com">shakil.ai@outlook.com</a> </li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/shakil-i-8454b4198/">Shakil Islam</a></li>
+            <li>GitHub: <a href="https://github.com/Wait2Late">Github</a></li>
+            <li>Resume:<a href="../Assets/Images/shakil-islam-cv.pdf"> CV</a> </li>
+        </ul>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
