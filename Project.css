@@ -141,6 +141,18 @@ footer h6 {
     gap: 0.5rem; /* Add minimal spacing between list items */
 }
 
+.container > .Un-ordered-List {
+    display: block;
+    text-align: left; /* Ensures text is aligned to the left */
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
 
+.carousel-item > img {
+    max-width: 100%; /* Ensures the image scales down to fit the container's width */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: contain; /* Ensures the entire image fits within the container */
+}
 
 
