@@ -114,6 +114,10 @@ hr {
 /*    list-style-type: none; !* Remove bullet points *!*/
 /*}*/
 
+footer{
+    color: white;
+}
+
 footer li {
     display: flex; /* Use flexbox for the list items */
     flex-direction: column; /* Stack icon and text vertically */

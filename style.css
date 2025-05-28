@@ -166,6 +166,10 @@ svg {
     color: black; /* Change text color for contrast */
 }
 
+footer{
+    color: white;
+}
+
 footer > ul{
     display: flex;
     flex-direction: row; /* Align items horizontally */
