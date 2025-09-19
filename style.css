@@ -193,9 +193,6 @@ footer h6 {
     footer > ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
-        /* flex-direction: column; Stack items vertically on smaller screens */
-        /* gap: 1rem; Add spacing between items */
     }
 
 }
