@@ -4,7 +4,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: #587291;"
+    background-color: #587291;
 }
 
 .container {
@@ -82,17 +82,7 @@ hr {
 
 }
 
-@media (max-width: 768px) {
-    .skills {
-        display: flex;
-        flex-direction: row; /* Stack items vertically on smaller screens */
-        flex-wrap: wrap;
-        gap: 1rem;
-        padding: 1rem;
-        align-items: flex-start;
-        justify-content: center;
-    }
-}
+
 
 .item {
     display: flex; /* Use flexbox for the items */
@@ -185,5 +175,27 @@ footer h6 {
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    .skills {
+        display: flex;
+        flex-direction: row; /* Stack items vertically on smaller screens */
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+        align-items: flex-start;
+        justify-content: center;
+    }
 
+    .projects .item ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
+    footer > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        /* flex-direction: column; Stack items vertically on smaller screens */
+        /* gap: 1rem; Add spacing between items */
+    }
+
+}
